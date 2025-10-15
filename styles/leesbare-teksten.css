@@ -1,0 +1,36 @@
+body {
+    line-height: 1.4;
+
+    @media (min-width: 500px) {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 900px) {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr 1fr;
+        line-height: 1.6;
+    }
+}
+
+.p1 {
+    font-size: 16px;
+    /* max-width: 30em; */
+
+}
+
+.p2 {
+    font-size: 20px;
+    /* max-width: 35em; */
+
+}
+
+.p3 {
+    font-size: 160%;
+}
+
+.p4 {
+    font-size: 2vw;
+}
