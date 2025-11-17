@@ -4,7 +4,22 @@
 
 }
 
-h2,
-p {
+body {
     font-family: isaac-eigenfont, sans-serif;
+}
+
+.cm p {
+    width: 30cm;
+}
+
+.pt p {
+    width: 850pt;
+}
+
+.vw p {
+    width: 80vw;
+}
+
+.em p {
+    width: 70em;
 }
