@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-11-2025 Checkout</title>
+</head>
+
+<body>
+    <h4>Waarom heeft elke input een label nodig?</h4>
+    <p>- Voor mensen die een screenreader gebruiken, hij leest dan het label voor.</p>
+    <label>Vul hier je naam in<input type="text"></label>
+
+    <h4>Wat doe je met de attributen type, autocomplete, inputmode en enterkeyhint?</h4>
+    <p>- Type geeft aan wat voor veld het is (bijv. email, tel, password etc)</p>
+    <p>- Autocomplete vult het veld automatisch in, bijvoorbeeld je e-mailadres of telefoonnummer</p>
+    <p>- Inputmode is dat je keyboard op mobiel automatisch aanpast naar het veld, bijvoorbeeld numeric, decimal, e-mail
+        en url</p>
+    <p>- Enterkeyhint is de blauwe knop rechtsonder (op iPhone). Deze kan je aanpassen naar go, done, previous etc.</p>
+    <label>E-mailadres<input type="email" autocomplete="on" inputmode="email" enterkeyhint="next"></label>
+
+
+    <h4>Wat doen fieldsets en legends in een formulier?</h4>
+    <p>- Fieldset creeert een kader rond een groep formuliervelden</p>
+    <p>- Legend, die als eerste binnen de fieldset moet staan, geeft een beschrijvende titel aan deze groep. Dit
+        verbetert
+        de duidelijkheid voor gebruikers en is beter voor mensen met een screenreader. </p>
+    <form>
+        <fieldset>
+            <legend>Kies een optie</legend>
+
+            <input type="radio" id="optie-1" name="opties" />
+            <label for="optie-1">Optie 1</label><br />
+
+            <input type="radio" id="optie-2" name="opties" checked />
+            <label for="optie-2">Optie 2</label><br />
+
+            <input type="radio" id="optie-3" name="opties" />
+            <label for="optie-3">Optie 3</label><br />
+
+        </fieldset>
+    </form>
+
+    <h4>Wat doen required, maxlength, min, max, step?</h4>
+    <p>- Required maakt een formulierveld verplicht</p>
+    <p>- Bepaalt het maximale aantal karakters dat een gebruiker mag invoeren</p>
+    <p>- Min bepaalt het minimum en max het maximale wat de gebruiker mag invoeren (bijv. numeriek)</p>
+    <p>- Step bepaalt met welke stapgrootte een waarde mag veranderen</p>
+
+    <label>Text met maxlength 10<input type="text" maxlength="10"></label><br>
+    <label>Number met min 18 en max 30 en step 0.5 <input type="number" min="18" max="30" step="0.5"></label>
+
+
+    <h4>Welke input pseudo-classes ken je nog niet? Maak met allemaal een demo'tje</h4>
+    <input type="text" placeholder="Dit is read write"><br>
+    <input type="text" placeholder="Dit is readonly" readonly><br>
+    <input type="text" placeholder="Dit is disabled" disabled><br>
+    <input type="text" placeholder="Dit is required *" required><br>
+
+
+
+</body>
+
+</html>
