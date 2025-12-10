@@ -1,0 +1,31 @@
+<form>
+    <label>Zoekterm <input required></label>
+    <button type="submit">Zoek!</button>
+</form>
+
+<style>
+    form:has(:user-invalid) {
+        background: #faa;
+    }
+
+    form:has(:user-invalid) button {
+        border: 2px solid red;
+    }
+
+    form:has(:user-invalid) label {
+        font-size: 2em;
+    }
+</style>
+
+<script type="module">
+    // Stap 1: zoek de input en stop die in een variabele
+    let inputElement = document.querySelector('input');
+
+    // Stap 2: luister naar het invalid event, en wacht tot dat afgevuurd wordt..
+    inputElement.addEventListener('invalid', function () {
+
+        // Stap 3: pas de tekst in de validatiemelding aan
+        inputElement.setCustomValidity('Niet tanken');
+
+    });
+</script>
