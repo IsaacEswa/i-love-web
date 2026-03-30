@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .scroll-container {
+            height: 300px;
+            overflow-y: auto;
+            container-type: scroll-state;
+            border: 2px solid black;
+        }
+
+        .card {
+            height: 200px;
+            margin: 20px;
+            background-color: lightgray;
+            transition: 0.3s;
+        }
+
+        @container scroll-state(scrolled: y) {
+            .card {
+                background-color: coral;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="scroll-container">
+        <div class="card">Item 1</div>
+        <div class="card">Item 2</div>
+        <div class="card">Item 3</div>
+        <div class="card">Item 4</div>
+    </section>
+
+</body>
+
+</html>

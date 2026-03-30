@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preference Media Queries</title>
+    <link rel="stylesheet" href="user-preference-media-queries.css">
+</head>
+
+<body>
+
+    <div class="animation-01">animated box</div>
+
+    <div class="animation-02">translucent box</div>
+
+    <div class="animation-03">contrast box</div>
+
+    <button class="animation-04">Force color!</button>
+    <br />
+
+    <div class="box theme-a">Theme A (initial)</div>
+    <div class="box theme-a adaptive">Theme A (changed if dark preferred)</div>
+    <br />
+
+    <div class="box theme-b">Theme B (initial)</div>
+    <div class="box theme-b adaptive">Theme B (changed if light preferred)</div>
+
+    <div class="invert-colors">
+        <p>
+            If color inversion is detected, this text will appear blue on white (the
+            inverse of yellow on black) along with a line over the text. If no color
+            inversion is happening, the text will appear red on light gray without the
+            line over the text.
+        </p>
+        <p>
+            If the text is gray and no overline is present, it means your browser doesn't
+            support the
+            <code>inverted-colors</code> media feature.
+        </p>
+    </div>
+
+</body>
+
+</html>

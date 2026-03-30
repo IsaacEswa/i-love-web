@@ -1,0 +1,183 @@
+/* ============================= */
+/* 1. prefers-reduced-motion */
+/* ============================= */
+.animation-01 {
+    animation: pulse 1s linear infinite both;
+    background-color: purple;
+}
+
+/* Tone down the animation to avoid vestibular motion triggers. */
+@media (prefers-reduced-motion: reduce) {
+    .animation-01 {
+        animation: dissolve 4s linear infinite both;
+        background-color: rgb(4, 226, 4);
+        text-decoration: overline;
+    }
+}
+
+.animation-01 {
+    color: white;
+    font: 1.2em sans-serif;
+    width: 10em;
+    padding: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes dissolve {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ============================= */
+/* 2. prefers-reduced-transparency */
+/* (niet werkend op Safari)
+/* ============================= */
+.animation-02 {
+    opacity: 0.4;
+}
+
+@media (prefers-reduced-transparency) {
+    .animation-02 {
+        opacity: 0.8;
+    }
+}
+
+/* ============================= */
+/* 3. prefers-contrast */
+/* ============================= */
+.animation-03 {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    outline: 1px dashed black;
+}
+
+@media (prefers-contrast: more) {
+    .animation-03 {
+        outline: 3px solid black;
+    }
+}
+
+@media (prefers-contrast: less) {
+    .animation-03 {
+        outline: 2px solid gray;
+    }
+}
+
+/* ============================= */
+/* 4. forced-colors */
+/* (niet werkend op Safari)
+/* ============================= */
+.animation-04 {
+    border: 0;
+    padding: 10px;
+    box-shadow:
+        -2px -2px 5px gray,
+        2px 2px 5px gray;
+}
+
+@media (forced-colors: active) {
+    .animation-04 {
+        /* Use a border instead, since box-shadow is forced to 'none' in forced-colors mode */
+        border: 2px ButtonText solid;
+    }
+}
+
+/* ============================= */
+/* 5. prefers-color-scheme */
+/* ============================= */
+div.box {
+    display: inline-block;
+    padding: 1em;
+    margin: 6px;
+    outline: 2px solid black;
+    width: 12em;
+    height: 2em;
+    vertical-align: middle;
+}
+
+.theme-a {
+    background: #ddccaa;
+    color: #773311;
+}
+
+@media (prefers-color-scheme: dark) {
+    .theme-a.adaptive {
+        background: #775533;
+        color: #ddccbb;
+        outline: 5px dashed black;
+    }
+}
+
+.theme-b {
+    background: #444477;
+    color: #bbbbdd;
+}
+
+@media (prefers-color-scheme: light) {
+    .theme-b.adaptive {
+        background: #bbccdd;
+        color: #333344;
+        outline: 5px dotted black;
+    }
+}
+
+/* ============================= */
+/* 6. prefers-reduced-data */
+/* ============================= */
+
+/* ============================= */
+/* 7. inverted-colors */
+/* ============================= */
+.invert-colors {
+    p {
+        color: gray;
+    }
+
+    @media (inverted-colors: inverted) {
+        p {
+            background: black;
+            color: yellow;
+            text-decoration: underline;
+        }
+    }
+
+    @media (inverted-colors: none) {
+        p {
+            background: #eeeeee;
+            color: red;
+        }
+    }
+}
