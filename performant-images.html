@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture element | Performant images</title>
+</head>
+
+<body>
+
+    <!-- <picture>
+        <source media="(min-width: 600px)" type="image/avif" srcset="/assets/avif-sample.avif">
+        <source type="image/avif" srcset="/assets/avif-animated.avif">
+        <source type="image/webp" srcset="/assets/webp-sample.webp">
+        <img src="/assets/lachende-man.jpeg" alt="Plaatje" width="400" height="300">
+    </picture> -->
+
+    <!-- <picture>
+        <source media="(min-width: 900px)" type="image/avif" srcset="/assets/avif-sample.avif">
+        <source media="(min-width: 800px)" type="image/avif" srcset="/assets/avif-animated.avif">
+        <source media="(min-width: 700px)" type="image/webp" srcset="/assets/webp-sample.webp">
+        <img src="/assets/lachende-man.jpeg" alt="Plaatje" width="400" height="300">
+    </picture> -->
+
+    <picture>
+        <source media="(orientation: landscape)" type="image/avif" srcset="/assets/avif-sample.avif" width="300"
+            height="400">
+        <source type="image/webp" srcset="/assets/webp-sample.webp">
+        <img src="/assets/lachende-man.jpeg" alt="Plaatje" width="400" height="300">
+    </picture>
+
+
+</body>
+
+</html>
