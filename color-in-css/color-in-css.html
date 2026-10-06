@@ -1,0 +1,43 @@
+<body>
+  <h1>Orange</h1>
+
+  <p>Orange hsl()</p>
+  <p>Orange rgb()</p>
+  <p>Orange hexcode</p>
+  <p>Orange custom properties</p>
+</body>
+
+<style>
+  /* :root {
+    --hue: 38.8;
+    --sat: 100;
+    --light: 50;
+  } */
+
+  h1 {
+    color: orange;
+  }
+
+  p:nth-of-type(1) {
+    color: hsl(38.8 100 50);
+  }
+
+  p:nth-of-type(2) {
+    color: rgb(255 165 0);
+  }
+
+  p:nth-of-type(3) {
+    color: #ffa500;
+  }
+
+  p:nth-of-type(4) {
+    --hue: 38.8;
+    --sat: 100;
+    --light: 50;
+    color: hsl(var(--hue) var(--sat) var(--light));
+
+    &:hover {
+      --light: 25;
+    }
+  }
+</style>
